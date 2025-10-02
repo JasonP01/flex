@@ -25,17 +25,18 @@
  */
 package com.xpdustry.flex.translator
 
+import com.deepl.api.DeepLClient
+import com.deepl.api.DeepLClientOptions
 import com.deepl.api.Formality
 import com.deepl.api.LanguageType
 import com.deepl.api.TextTranslationOptions
-import com.deepl.api.TranslatorOptions
 import java.util.Locale
 import java.util.concurrent.CompletableFuture
 import java.util.concurrent.Executor
 
 // TODO When implementing custom retries and backoff, use raw deepl API
 internal class DeepLTranslator(apiKey: String, private val executor: Executor) : BaseTranslator() {
-    private val translator = com.deepl.api.Translator(apiKey, TranslatorOptions().setAppInfo("Flex", "v1"))
+    private val translator = DeepLClient(apiKey, DeepLClientOptions().setAppInfo("Flex", "v1"))
 
     internal val sourceLanguages: List<Locale> = fetchLanguages(LanguageType.Source)
     internal val targetLanguages: List<Locale> = fetchLanguages(LanguageType.Target)
