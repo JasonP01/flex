@@ -1,3 +1,9 @@
+> [!Warning]
+>
+> The project is now deprecated. In retrospect, this plugin is not very good and its simpler to implement chat formatting yourself in your own plugin if all you do is changing the prefix of your player names.
+>
+> As for flex-translator, it's always available on [maven](https://maven.xpdustry.com/#/releases/com/xpdustry/flex-translator), but if i were you, i would copy the code (not very complicated imo) and ask AI to convert it to a blocking API.
+
 # flex
 
 [![Maven](https://maven.xpdustry.com/api/badge/latest/releases/com/xpdustry/flex?color=008080&name=flex&prefix=v)](https://maven.xpdustry.com/#/releases/com/xpdustry/flex)
